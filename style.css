@@ -1,0 +1,49 @@
+.main-body{
+  display:grid;
+  color:black;
+  background-color:#f7f5f3;
+  grid-template-columns: minmax(300px, auto) 1fr;
+  grid-template-areas:"navbar mainContent";
+    grid-gap: 20px;
+  }
+#navbar a {
+  display:block;
+  border:2px solid black;
+  padding: 13px;
+  margin: 10px 0;
+  text-decoration: none;
+  color:black;
+}
+.nav-link:hover {
+  color: red;
+  background-color: white;
+}
+#navbar{
+  background-color:#ccc;
+  grid-area:navbar;
+  position:fixed;
+  width:300px;
+  height:100%;
+}
+#main-doc{
+  grid-area: mainContent;
+}
+header{
+  padding:13px;
+  font-size:1.5em;
+  font-weight:bold;
+}
+code{
+  background-color:#ccc;
+  display:block;
+  padding:20px;
+}
+@media screen and (max-width:750px){
+  div.main-body{
+    grid-template-columns:1fr;
+    grid-template-areas: "navbar" "mainContent";
+  }
+  #navbar{
+    position: inherit;
+  }
+}
